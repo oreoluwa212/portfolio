@@ -4,7 +4,7 @@ A modern, responsive portfolio website showcasing my journey as a Full Stack Dev
 
 ## 🚀 Live Demo
 
-**[View Live Portfolio](https://portfolio-oreoluwa.vercel.app)**
+**[View Live Portfolio](https://oreoluwa212.github.io/portfolio)**
 
 ## 📖 About
 
