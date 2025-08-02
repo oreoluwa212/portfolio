@@ -23,6 +23,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Your existing CSS goes here -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -46,7 +48,11 @@
       <div class="profile-section">
         <div class="profile-image-container">
           <div class="profile-image">
-            <!-- Profile image placeholder -->
+            <img
+              src="public/dev-ed-wave.png"
+              alt="Oreoluwa"
+              class="profile-image"
+            />
           </div>
           <div class="profile-status"></div>
         </div>
@@ -311,7 +317,7 @@
 
         <div class="experience-timeline">
           <div class="experience-item">
-            <time class="experience-date">September 2023 - Present</time>
+            <time class="experience-date">September 2023 - October 2024</time>
             <h3 class="experience-title">Student Fellow @ Tech4Dev</h3>
             <h4 class="experience-role">Mentor</h4>
             <p class="experience-description">
@@ -468,7 +474,7 @@
               />
             </div>
             <div class="project-content">
-              <h4 class="project-title">Life Plus Web App</h4>
+              <h4 class="project-title">Life Plus</h4>
               <p class="project-description">
                 A comprehensive web application providing services for life
                 coaching and personal development. Built with React and Tailwind
@@ -575,19 +581,21 @@
             <div class="project-image">
               <img
                 src="public/web10.JPG"
-                alt="Taskme AI"
+                alt="BisPayer Screenshot"
                 class="project-image"
               />
             </div>
             <div class="project-content">
               <h4 class="project-title">BisPayer</h4>
               <p class="project-description">
-                Perfect place for your business promotion
+                Empowering businesses with smart promotional strategies. From
+                expert consultations to compelling taglines, we make your brand
+                stand out.
               </p>
               <div class="project-tech">
-                <span class="tech-tag">Promotion</span>
-                <span class="tech-tag">Growth</span>
-                <span class="tech-tag">Business</span>
+                <span class="tech-tag">Branding</span>
+                <span class="tech-tag">Business Promotion</span>
+                <span class="tech-tag">Creative Strategy</span>
               </div>
             </div>
           </a>
@@ -620,80 +628,6 @@
                 <span class="tech-tag">TMDB API</span>
                 <span class="tech-tag">Streaming</span>
               </div>
-            </div>
-          </a>
-
-          <a
-            href="https://schoolbase-webapp.onrender.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="project-card"
-          >
-            <div class="project-image">
-              <img
-                src="public/web7.png"
-                alt="School Base Web App"
-                class="project-image"
-              />
-            </div>
-            <div class="project-content">
-              <h4 class="project-title">School Base Web App</h4>
-              <p class="project-description">
-                A school management system that allows staff to handle
-                scheduling, assignments, and student performance. Designed for
-                simplicity and efficiency in educational institutions.
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">Node.js</span>
-                <span class="tech-tag">Education</span>
-              </div>
-            </div>
-          </a>
-
-          <a
-            href="https://match-lesson.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="project-card"
-          >
-            <div class="project-image">
-              <img
-                src="public/web6.PNG"
-                alt="Match Lesson Platform"
-                class="project-image"
-              />
-            </div>
-            <div class="project-content">
-              <h4 class="project-title">Match Lesson Platform (WIP)</h4>
-              <p class="project-description">
-                An educational platform matching students with lessons in
-                various subjects. Built to offer a personalized learning
-                experience with a clean UI.
-              </p>
-            </div>
-          </a>
-
-          <a
-            href="https://simbi-tech-web-app.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="project-card"
-          >
-            <div class="project-image">
-              <img
-                src="public/web2.png"
-                alt="Simbi Tech Web App"
-                class="project-image"
-              />
-            </div>
-            <div class="project-content">
-              <h4 class="project-title">Simbi Tech Web App</h4>
-              <p class="project-description">
-                A web app for a tech company offering services in software
-                development, consulting, and more. Focused on showcasing the
-                company's portfolio and expertise.
-              </p>
             </div>
           </a>
         </div>
@@ -862,7 +796,11 @@
               <h3 style="margin-bottom: 1.5rem; color: var(--text-primary)">
                 Send me a message
               </h3>
-              <form id="contactForm">
+              <form
+                action="mailto:oreoluwaajayyiruth@gmail.com"
+                method="post"
+                enctype="text/plain"
+              >
                 <div class="form-group">
                   <label for="name">Full Name</label>
                   <input
@@ -906,442 +844,12 @@
                   ></textarea>
                 </div>
 
-                <button type="submit" class="submit-btn">
-                  <span class="btn-text">Send Message</span>
-                  <span class="loading" style="display: none"></span>
-                </button>
+                <button type="submit" class="submit-btn">Send Message</button>
               </form>
             </div>
           </div>
         </div>
       </section>
     </main>
-
-    <script>
-      // Smooth scrolling for navigation links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-
-          const targetId = this.getAttribute("href");
-          const targetElement = document.querySelector(targetId);
-
-          if (targetElement) {
-            const offsetTop = targetElement.offsetTop - 80;
-            window.scrollTo({
-              top: offsetTop,
-              behavior: "smooth",
-            });
-
-            // Close mobile menu if open
-            document.getElementById("mobile-menu-toggle").checked = false;
-          }
-        });
-      });
-
-      // Add scroll effect to navigation
-      window.addEventListener("scroll", () => {
-        const sections = document.querySelectorAll("section[id]");
-        const navLinks = document.querySelectorAll(".nav-link");
-
-        let current = "";
-        sections.forEach((section) => {
-          const sectionTop = section.offsetTop - 100;
-          const sectionHeight = section.clientHeight;
-
-          if (
-            window.pageYOffset >= sectionTop &&
-            window.pageYOffset < sectionTop + sectionHeight
-          ) {
-            current = section.getAttribute("id");
-          }
-        });
-
-        navLinks.forEach((link) => {
-          link.classList.remove("active");
-          if (link.getAttribute("href") === `#${current}`) {
-            link.classList.add("active");
-          }
-        });
-      });
-
-      // Add fade-in animation on scroll
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px",
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
-          }
-        });
-      }, observerOptions);
-
-      // Observe elements for animation
-      document
-        .querySelectorAll(
-          ".skill-item, .experience-item, .project-card, .about-card, .interest-item"
-        )
-        .forEach((el) => {
-          el.style.opacity = "0";
-          el.style.transform = "translateY(20px)";
-          el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
-          observer.observe(el);
-        });
-
-      // Contact form handling
-      document
-        .getElementById("contactForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-
-          const submitBtn = this.querySelector(".submit-btn");
-          const btnText = submitBtn.querySelector(".btn-text");
-          const loading = submitBtn.querySelector(".loading");
-
-          // Show loading state
-          btnText.style.display = "none";
-          loading.style.display = "inline-block";
-          submitBtn.disabled = true;
-
-          // Simulate form submission (replace with actual form handling)
-          setTimeout(() => {
-            // Reset form
-            this.reset();
-
-            // Show success message
-            alert("Thank you for your message! I'll get back to you soon.");
-
-            // Reset button state
-            btnText.style.display = "inline";
-            loading.style.display = "none";
-            submitBtn.disabled = false;
-          }, 2000);
-        });
-
-      // Add typing effect to hero title
-      function typeWriter(element, text, speed = 100) {
-        element.innerHTML = "";
-        let i = 0;
-
-        function type() {
-          if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-          }
-        }
-
-        type();
-      }
-
-      // Initialize typing effect when page loads
-      window.addEventListener("load", () => {
-        const heroTitle = document.querySelector(".hero-title");
-        const originalText = heroTitle.textContent;
-
-        setTimeout(() => {
-          typeWriter(heroTitle, originalText, 50);
-        }, 1000);
-      });
-
-      // Add parallax effect to background
-      window.addEventListener("scroll", () => {
-        const scrolled = window.pageYOffset;
-        const parallax = document.querySelector(".bg-animation");
-        const speed = scrolled * 0.2;
-
-        if (parallax) {
-          parallax.style.transform = `translateY(${speed}px)`;
-        }
-      });
-
-      // Add hover effects to skill items
-      document.querySelectorAll(".skill-item").forEach((item) => {
-        item.addEventListener("mouseenter", function () {
-          this.style.transform = "translateY(-8px) scale(1.05)";
-        });
-
-        item.addEventListener("mouseleave", function () {
-          this.style.transform = "translateY(0) scale(1)";
-        });
-      });
-
-      // Add click effect to CTA buttons
-      document
-        .querySelectorAll(".cta-button, .submit-btn")
-        .forEach((button) => {
-          button.addEventListener("click", function (e) {
-            let ripple = document.createElement("span");
-            ripple.classList.add("ripple");
-            this.appendChild(ripple);
-
-            let x = e.clientX - e.target.offsetLeft;
-            let y = e.clientY - e.target.offsetTop;
-
-            ripple.style.left = `${x}px`;
-            ripple.style.top = `${y}px`;
-
-            setTimeout(() => {
-              ripple.remove();
-            }, 600);
-          });
-        });
-
-      // Add dynamic greeting based on time
-      function updateGreeting() {
-        const greeting = document.querySelector(".hero-greeting");
-        const hour = new Date().getHours();
-        let timeGreeting = "";
-
-        if (hour < 12) {
-          timeGreeting = "Good morning! ☀️";
-        } else if (hour < 17) {
-          timeGreeting = "Good afternoon! 🌤️";
-        } else {
-          timeGreeting = "Good evening! 🌙";
-        }
-
-        greeting.textContent = `${timeGreeting} I'm Oreoluwa!`;
-      }
-
-      // Update greeting on page load
-      window.addEventListener("load", updateGreeting);
-
-      // Add cursor trail effect
-      let mouseX = 0;
-      let mouseY = 0;
-
-      document.addEventListener("mousemove", (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-      });
-
-      // Create floating particles
-      function createParticle() {
-        const particle = document.createElement("div");
-        particle.style.position = "fixed";
-        particle.style.width = "4px";
-        particle.style.height = "4px";
-        particle.style.background = "var(--primary-color)";
-        particle.style.borderRadius = "50%";
-        particle.style.pointerEvents = "none";
-        particle.style.opacity = "0.6";
-        particle.style.zIndex = "1";
-        particle.style.left = mouseX + "px";
-        particle.style.top = mouseY + "px";
-
-        document.body.appendChild(particle);
-
-        setTimeout(() => {
-          particle.remove();
-        }, 1000);
-      }
-
-      // Add particle trail on mouse move (throttled)
-      let particleTimeout;
-      document.addEventListener("mousemove", () => {
-        if (particleTimeout) return;
-
-        particleTimeout = setTimeout(() => {
-          createParticle();
-          particleTimeout = null;
-        }, 100);
-      });
-
-      // Add CSS for ripple effect
-      const style = document.createElement("style");
-      style.textContent = `
-        .ripple {
-          position: absolute;
-          border-radius: 50%;
-          background: rgba(255, 255, 255, 0.3);
-          pointer-events: none;
-          transform: scale(0);
-          animation: ripple-animation 0.6s linear;
-        }
-        
-        @keyframes ripple-animation {
-          to {
-            transform: scale(4);
-            opacity: 0;
-          }
-        }
-        
-        .nav-link.active {
-          background: var(--gradient-primary);
-          color: white;
-          transform: translateX(8px);
-        }
-        
-        .nav-link.active::before {
-          left: 0;
-        }
-        
-        /* Enhanced scrollbar */
-        ::-webkit-scrollbar {
-          width: 12px;
-        }
-        
-        ::-webkit-scrollbar-track {
-          background: var(--bg-secondary);
-          border-radius: 6px;
-        }
-        
-        ::-webkit-scrollbar-thumb {
-          background: var(--gradient-primary);
-          border-radius: 6px;
-          border: 2px solid var(--bg-secondary);
-        }
-        
-        ::-webkit-scrollbar-thumb:hover {
-          background: var(--primary-dark);
-        }
-        
-        /* Custom selection colors */
-        ::selection {
-          background: var(--primary-color);
-          color: white;
-        }
-        
-        ::-moz-selection {
-          background: var(--primary-color);
-          color: white;
-        }
-        
-        /* Focus styles for accessibility */
-        .nav-link:focus,
-        .cta-button:focus,
-        .contact-link:focus,
-        .form-control:focus {
-          outline: 2px solid var(--primary-color);
-          outline-offset: 2px;
-        }
-        
-        /* Dark mode media query */
-        @media (prefers-color-scheme: dark) {
-          :root {
-            --text-primary: #f9fafb;
-            --text-secondary: #d1d5db;
-            --text-light: #9ca3af;
-            --bg-primary: #111827;
-            --bg-secondary: #1f2937;
-            --bg-card: #374151;
-            --border-color: #4b5563;
-          }
-        }
-        
-        /* Print styles */
-        @media print {
-          .sidebar,
-          .mobile-menu-btn,
-          .bg-animation {
-            display: none !important;
-          }
-          
-          .main-content {
-            margin-left: 0 !important;
-          }
-          
-          .section {
-            page-break-inside: avoid;
-          }
-        }
-        
-        /* Reduced motion for accessibility */
-        @media (prefers-reduced-motion: reduce) {
-          *,
-          *::before,
-          *::after {
-            animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
-          }
-        }
-      `;
-      document.head.appendChild(style);
-
-      // Add performance optimizations
-      // Lazy load images
-      const images = document.querySelectorAll("img[data-src]");
-      const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target;
-            img.src = img.dataset.src;
-            img.classList.remove("lazy");
-            imageObserver.unobserve(img);
-          }
-        });
-      });
-
-      images.forEach((img) => imageObserver.observe(img));
-
-      // Preload critical resources
-      const preloadLink = document.createElement("link");
-      preloadLink.rel = "preload";
-      preloadLink.href =
-        "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap";
-      preloadLink.as = "style";
-      document.head.appendChild(preloadLink);
-
-      // Add error handling for external resources
-      window.addEventListener("error", (e) => {
-        if (e.target.tagName === "IMG") {
-          e.target.style.display = "none";
-          console.warn("Failed to load image:", e.target.src);
-        }
-      });
-
-      // Initialize all animations and effects when DOM is ready
-      document.addEventListener("DOMContentLoaded", () => {
-        // Add staggered animations to skill items
-        document.querySelectorAll(".skill-item").forEach((item, index) => {
-          item.style.animationDelay = `${index * 0.1}s`;
-        });
-
-        // Add staggered animations to project cards
-        document.querySelectorAll(".project-card").forEach((card, index) => {
-          card.style.animationDelay = `${index * 0.15}s`;
-        });
-
-        // Initialize tooltips for social links
-        document.querySelectorAll(".social-link").forEach((link) => {
-          const title = link.getAttribute("title");
-          if (title) {
-            link.addEventListener("mouseenter", function () {
-              const tooltip = document.createElement("div");
-              tooltip.textContent = title;
-              tooltip.style.cssText = `
-                position: absolute;
-                background: var(--secondary-color);
-                color: white;
-                padding: 0.5rem;
-                border-radius: 4px;
-                font-size: 0.875rem;
-                z-index: 1000;
-                pointer-events: none;
-                bottom: 100%;
-                left: 50%;
-                transform: translateX(-50%);
-                margin-bottom: 0.5rem;
-              `;
-              this.style.position = "relative";
-              this.appendChild(tooltip);
-            });
-
-            link.addEventListener("mouseleave", function () {
-              const tooltip = this.querySelector("div");
-              if (tooltip) tooltip.remove();
-            });
-          }
-        });
-
-        console.log("🚀 Portfolio loaded successfully!");
-      });
-    </script>
   </body>
 </html>
